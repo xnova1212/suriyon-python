@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="container">
+        <h1 class="center">{{title}}</h1>
+        <hr>
+        <blockquote>
+          This is the assignment of Professor Suriyon.<br>
+          Author: Phumin Maliwan (64122420220).
+        </blockquote>
+        <hr>
+        <h3 class="center">FORM</h3>
+        <div class="row">
+            <form class="col s12" method="POST">
+              <div class="row">
+
+                <div class="input-field col s12">
+                  <input name="title" id="id" type="text" class="validate">
+                  <label for="id">title</label>
+                </div>
+     
+                <div class="input-field col s12">
+                  <input name="img" id="name" type="text" class="validate">
+                  <label for="name">img (Link eg:myweb.com/tyu.png)</label>
+                </div>
+       
+                <div class="input-field col s12">
+                  <input name="description" id="mobile" type="text" class="validate">
+                  <label for="mobile">description</label>
+                </div>
+          
+                <button type="submit" class="btn waves-effect waves-light">
+                  <i class="material-icons left">person_add</i>
+                  addnow
+                </button>
+              </div>
+
+            </form>
+          </div>
+    </div>
+{% endblock %}

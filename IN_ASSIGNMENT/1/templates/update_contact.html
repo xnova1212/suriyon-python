@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="container">
+        <h1>{{title}}</h1>
+        <hr>
+        <div class="row">
+            <form class="col s12" method="POST">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input value="{{ contact.title }}" name="title"id="id" type="text" class="validate">
+                  <label for="id">Title</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input  value="{{contact.img}}"name="img" id="name" type="text" class="validate">
+                  <label for="name">Img</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="mobile" name="description" class="materialize-textarea">{{contact.description}}</textarea>
+                  <label for="mobile">Description</label>
+                </div>
+              </div>
+              <div class="row">
+               <button type="submit" class="btn waves-effect waves-light">
+                <i class="material-icons left">person_add</i>
+                Update Now
+            </button>
+              </div>
+            </form>
+          </div>
+    </div>
+{% endblock %}

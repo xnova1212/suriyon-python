@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Mycontact
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="container">
+    <h1 class="center">สถานที่ท่องเที่ยว</h1>
+    <hr>
+    <blockquote>
+      This is the assignment of Professor Suriyon.<br>
+      Author: Phumin Maliwan (64122420220).
+    </blockquote>
+    <hr>
+    <div class="row" style="padding-top: 15px;">
+      <div class="col s6">
+        <nav>
+          <div class="nav-wrapper">
+            <form action="{{ url_for('search_contact') }}" method="post">
+              <div class="input-field">
+                <input id="search" type="search" placeholder="ค้นหาด้วยชื่อ" name="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="col s6">
+          <a href="{{ url_for('new_contact')}}" class="btn-large"><i class="material-icons">add</i></a>
+      </div>
+    </div>
+    <div class="row">
+      
+      {% for c in contacts %}
+      
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{ c.img }}">
+              <a href="{{ url_for('update_contact', id=c.id) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="tiny material-icons">edit</i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">{{ c.title }}</span>
+              <p>{{ replace(c.description, 100) }}</p>
+            </div>
+            <div class="card-action center">
+              <a href="{{ url_for('contact_detail', id=c.id)}}">View more</a>
+              <a href="{{ url_for('delete_contact', id=c.id)}}">Delete</a>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+{% endblock %}
