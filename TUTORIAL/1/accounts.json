@@ -1,0 +1,17 @@
+{
+    "accounts": [
+        {
+            "id": 1,
+            "username": "mantvmass",
+            "password": "$2b$12$.Pkym75TlJAHfANlLQ4hJOPtTte6mEsvQQe6anz/MfqUKZqlsvGqi",
+            "timestamp": 1673878552
+        }
+    ],
+    "customers": [
+        {
+            "account_id": 1,
+            "fullname": "Phumin Maliwan",
+            "balance": 50000.0
+        }
+    ]
+}
