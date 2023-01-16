@@ -1,6 +1,9 @@
-# suriyon-python
+# Suriyon-python
 
-สวัสดีเพื่อนโหลดโปรเจคของเราและใช้คำสั่ง 
+สวัสดีเพื่อนโหลดโปรเจคของเราและทำตาม SetUp ด้านล้าง
+
+SETUP
+-----
 ```shell
 py -pythonversion -m venv myenv
 myenv\Scripts\activate
@@ -10,4 +13,13 @@ myenv\Scripts\activate
 ```shell
 pip install -r requirements.txt
 ```
-เพื่อติดตั้ง lib, module ต่างๆแ ของโปรเจค
+เพื่อติดตั้ง lib, module ต่างๆแ ของโปรเจค  
+
+HOW TO
+------
+function สำหรับหาค่า ID ล่าสุดสำหรับทำ Generate ID
+```python
+def getLastIndex(data, new_index = 0) -> int:
+    last_index = data[-1]["id"]
+    return last_index + new_index
+```
