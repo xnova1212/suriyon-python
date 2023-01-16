@@ -1,4 +1,4 @@
-# Suriyon-python
+# Suriyon Python
 
 สวัสดีเพื่อนโหลดโปรเจคของเราและทำตาม SetUp ด้านล้างได้เลย
 
