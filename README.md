@@ -13,7 +13,7 @@ myenv\Scripts\activate
 ```shell
 pip install -r requirements.txt
 ```
-เพื่อติดตั้ง lib, module ต่างๆแ ของโปรเจค  
+เพื่อติดตั้ง lib, module ต่างๆของโปรเจค  
 
 HOW TO
 ------
