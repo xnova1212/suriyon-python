@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    My Contect
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Contacts List</h1>
+        <hr>
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+
+
+                {% for c in contacts %}
+                
+                    <tr>
+                        <td>{{ c.id }}</td>
+                        <td>{{ c.name }}</td>
+                        <td>
+                            <a href="{{ url_for('contact_detail', id = c.id) }}" class="waves-effect waves-light btn-small cyan accent-3" >More Detail</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+                
+        
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
