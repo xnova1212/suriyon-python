@@ -52,3 +52,13 @@ with app.app_context():
     std.sname = "Hello World"
     db.session.commit()
 ```
+
+Example delete data. run in python shell only
+```python
+from server import app, db, Student
+
+with app.app_context():
+    std = Student.query.filter_by(sid="64122420220").first()
+    db.session.delete(std)
+    db.session.commit()
+```
