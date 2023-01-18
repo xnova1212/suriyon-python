@@ -30,7 +30,25 @@ Example query data. run in python shell only
 from server import app, db, Student
 
 with app.app_context():
-    stds = Student.query.all() # return list
+
+    stds = Student.query.all() # no condition
     for i in stds:
         print(i.sid, i.sname, i.smobile, i.sfaculty)
+
+
+    std1 = Student.query.filter(Student.sid=="64122420220").first() # use condition 1 ==, >, <, other| .first() = chain function ทำงานโดนการเอามาคนเดียว
+
+
+    std2 = Student.query.filter_by(sid="64122420220").first() # use condition 2 | .first() = chain function ทำงานโดนการเอามาคนเดียว
+```
+
+
+Example update data. run in python shell only
+```python
+from server import app, db, Student
+
+with app.app_context():
+    std = Student.query.filter_by(sid="64122420220").first()
+    std.sname = "Hello World"
+    db.session.commit()
 ```
